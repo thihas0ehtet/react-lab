@@ -1,23 +1,21 @@
-import React from 'react'
+import { useContext } from 'react';
 import { Card } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Layout } from '../components/layouts'
+import { LangContext } from '../context/Lang';
 
 const About = () => {
+    const { dispatch: { translate } } = useContext(LangContext);
     return (
-        <div className='d-flex justify-content-center'>
-            <Card className='p-4 shadow'>
-                <main>
-                    <h2>Who are we?</h2>
-                    <p>
-                        That feels like an existential question, don't you
-                        think?
-                    </p>
-                </main>
-                <nav>
-                    <Link to="/" className='btn btn-success'>Home</Link>
-                </nav>
-            </Card>
-        </div>
+        <Layout title={translate('about')}>
+            <div className='d-flex justify-content-center'>
+                <Card className='p-4 shadow'>
+                    <main>
+                        <h2>Welcome to the About page!</h2>
+                        <p>You can do this, I believe in you.</p>
+                    </main>
+                </Card>
+            </div>
+        </Layout>
     )
 }
 

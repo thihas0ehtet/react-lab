@@ -1,1 +1,26 @@
+@import './variable.scss';
+
 @import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/react-pro-sidebar/dist/scss/styles.scss';
+
+.header {
+    height: 9vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+  
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+  
+.pro-sidebar > .pro-sidebar-inner {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.cursor{
+    cursor: pointer;
+}
+  
